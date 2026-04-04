@@ -5,3 +5,6 @@ node_modules/
 .gemini/
 brain/
 *.log
+
+.vercel
+.env*.local

@@ -660,13 +660,13 @@
 
     .carousel-track {
       display: flex;
-      width: 300%;
+      width: 600%;
       height: 100%;
-      animation: heroSlide 15s infinite cubic-bezier(0.45, 0, 0.55, 1);
+      animation: heroSlide 30s infinite cubic-bezier(0.45, 0, 0.55, 1);
     }
 
     .carousel-slide {
-      width: 33.33%;
+      width: 16.666%;
       height: 100%;
     }
 
@@ -680,18 +680,33 @@
     @keyframes heroSlide {
 
       0%,
-      28% {
+      14% {
         transform: translateX(0);
       }
 
-      33%,
-      61% {
-        transform: translateX(-33.33%);
+      16.6%,
+      30.6% {
+        transform: translateX(-16.666%);
       }
 
-      66%,
-      95% {
-        transform: translateX(-66.66%);
+      33.3%,
+      47.3% {
+        transform: translateX(-33.333%);
+      }
+
+      50%,
+      64% {
+        transform: translateX(-50%);
+      }
+
+      66.6%,
+      80.6% {
+        transform: translateX(-66.666%);
+      }
+
+      83.3%,
+      97.3% {
+        transform: translateX(-83.333%);
       }
 
       100% {
@@ -1291,10 +1306,16 @@
           </div>
 
           <div class="price-block fade-up fade-up-d3">
-            <span class="price-now">21&nbsp;569 FCFA</span>
+            <span class="price-now">21&nbsp;999 FCFA</span>
             <span class="price-old">66&nbsp;000 FCFA</span>
             <span class="price-badge">−67&nbsp;%</span>
           </div>
+
+          <p class="fade-up fade-up-d4"
+            style="font-size:0.85rem; color:var(--on-surface-variant); margin-top: 1rem; max-width: 450px;">
+            ℹ️ <em>Assurez-vous de bien saisir votre email pour recevoir le lien. Vous pouvez utiliser un
+              <strong>pseudonyme</strong> lors du paiement pour rester anonyme.</em>
+          </p>
 
           <div class="trust-row fade-up fade-up-d4">
             <span class="trust-badge"><span class="trust-icon">🔒</span> Paiement sécurisé</span>
@@ -1309,13 +1330,22 @@
           <div class="hero-carousel">
             <div class="carousel-track">
               <div class="carousel-slide">
-                <img src="./assets/hero caroussel/hero1 (0).jpeg" alt="Collection Baltazar 1">
+                <img src="./assets/hero caroussel/0.jpeg" alt="Collection Baltazar 1">
               </div>
               <div class="carousel-slide">
-                <img src="./assets/hero caroussel/hero1 (1).jpeg" alt="Collection Baltazar 2">
+                <img src="./assets/hero caroussel/1.jpeg" alt="Collection Baltazar 2">
               </div>
               <div class="carousel-slide">
-                <img src="./assets/hero caroussel/hero1 (2).jpeg" alt="Collection Baltazar 3">
+                <img src="./assets/hero caroussel/2.jpeg" alt="Collection Baltazar 3">
+              </div>
+              <div class="carousel-slide">
+                <img src="./assets/hero caroussel/3.jpeg" alt="Collection Baltazar 4">
+              </div>
+              <div class="carousel-slide">
+                <img src="./assets/hero caroussel/4.jpeg" alt="Collection Baltazar 5">
+              </div>
+              <div class="carousel-slide">
+                <img src="./assets/hero caroussel/5.jpeg" alt="Collection Baltazar 6">
               </div>
             </div>
           </div>
@@ -1334,7 +1364,7 @@
       </div>
       <div style="max-width: 800px; margin: 0 auto;">
         <div class="video-container">
-          <iframe src="https://youtu.be/Vbg7j6UE6LQ?si=4-Svn4cqszUjqFBz" title="Comment payer sur Balthazar"
+          <iframe src="https://www.youtube.com/embed/Vbg7j6UE6LQ" title="Comment payer sur Balthazar"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
@@ -1415,7 +1445,7 @@
         </div>
         <div style="text-align: right;">
           <p class="label-upper" style="color: var(--secondary);">Prix de l'offre aujourd'hui</p>
-          <p style="font-family:var(--font-headline); font-size:2rem; font-weight:800; color:var(--primary);">21 569
+          <p style="font-family:var(--font-headline); font-size:2rem; font-weight:800; color:var(--primary);">21 999
             FCFA</p>
           <p style="font-size:0.85rem; color:var(--on-surface-variant); text-decoration:line-through;">66 000 FCFA</p>
         </div>
@@ -1504,7 +1534,7 @@
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
           <p class="testimonial-text">Le contenu est exactement ce qui était annoncé. Télégram c'est vraiment pratique
-            et discret. Merci Baltazar 👌</p>
+            et discret. Merci 👌</p>
           <p class="testimonial-author"> Membre #2101</p>
         </div>
       </div>
@@ -1521,7 +1551,8 @@
     <div class="container">
       <div class="section-header">
         <p class="label-upper">Preuves de satisfaction</p>
-        <h2 class="display-sm">Ils ont déjà franchi le pas !</h2>
+        <h2 class="display-sm">Ils ont déjà franchi le pas et ont donné leur autorisation pour préciser leur nom dans
+          les témoignages. La confidentialité de nos clients est très primordial pour nous!</h2>
         <p class="body-md">Voici quelques retours de nos membres satisfaits par la qualité de nos services.</p>
       </div>
 
@@ -1610,14 +1641,23 @@
       <h2 class="display-sm">Prêt à rejoindre les<br />2357 membres satisfaits ?</h2>
       <p>Accès instantané · Paiement sécurisé · 100% Discret</p>
       <div class="cta-price-row">
-        <span class="cta-price-now">21 569 FCFA</span>
+        <span class="cta-price-now">21 999 FCFA</span>
         <span class="cta-price-old">66 000 FCFA</span>
       </div>
       <a href="https://baltazar.mymaketou.store/fr/products/veux-tu-1385-video-289-photo-260-bd-video-baltazar-et-du-petit-baltazar-inclu/checkout"
         class="btn-white" id="cta-main" target="_blank" rel="noopener">
-        🛒 Acheter Maintenant — 21 569 FCFA
+        🛒 Acheter Maintenant — 21 999 FCFA
       </a>
-      <p style="margin-top:1rem; font-size:0.85rem; opacity:0.7;">Moyens de paiement sécurisés disponibles</p>
+      <p
+        style="margin-top:1.5rem; font-size:0.9rem; color: rgba(255,255,255,0.95); font-weight: 500; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.5; background: rgba(0,0,0,0.1); padding: 1rem; border-radius: 0.75rem; border: 1px dashed rgba(255,255,255,0.3);">
+        ⚠️ <strong>Important :</strong> Assurez-vous d'insérer correctement votre email lors de l'achat pour recevoir
+        votre lien Télégram. Vous pouvez utiliser un <strong>pseudonyme</strong> lors du paiement pour préserver votre
+        anonymat.
+      </p>
+      <p style="margin-top:1.5rem; font-size:0.85rem; opacity:0.8;">Moyens de paiement sécurisés disponibles via mobile
+        money ( Wave, Orange Money, MTN momo, Moov money, ... ) ou carte bancaire ( Visa et MasterCard )</p>
+      <img src="./assets/moyens-paiement.png" alt="Moyens de paiement sécurisés"
+        style="width: 100%; max-width: 350px; margin: 1rem auto 0; display: block; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
     </div>
   </section>
 
@@ -1637,7 +1677,7 @@
   <!-- ===== FLOATING CTA BAR ===== -->
   <div class="float-bar" id="floatBar">
     <span class="float-bar-text">
-      🔥 Promo : <strong>21 569 FCFA</strong> au lieu de 66 000 FCFA
+      🔥 Promo : <strong>21 999 FCFA</strong> au lieu de 66 000 FCFA
     </span>
     <a href="https://baltazar.mymaketou.store/fr/products/veux-tu-1385-video-289-photo-260-bd-video-baltazar-et-du-petit-baltazar-inclu/checkout"
       class="btn-primary" style="font-size:0.85rem; padding:0.65rem 1.4rem;" target="_blank" rel="noopener">
@@ -1697,6 +1737,16 @@
     );
     fadeEls.forEach(el => { el.style.opacity = '0'; scrollObs.observe(el); });
   </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+
+  /* vercel analytics */
+  <script>
+    window.va = window.va || function () {
+      (window.vaq = window.vaq || []).push(arguments);
+    };
+  </script>
+  <script defer src="/<unique-path>/script.js"></script>
 </body>
 
 </html>

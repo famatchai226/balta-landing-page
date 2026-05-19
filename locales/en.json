@@ -1,0 +1,120 @@
+{
+  "lang": "en",
+  "meta": {
+    "title": "+ 2103 Videos + 289 Photos + 260 Comics — Baltazar",
+    "description": "Get access to + 2103 HD Videos, 289 HD Photos and 260 Adult Comics via a secure Telegram channel. Exclusive Baltazar offer for the Mature & Discreet Man."
+  },
+  "nav": {
+    "cta": "🔥 Buy Now"
+  },
+  "hero": {
+    "badge": "🔥 Limited Offer — Exclusive Promo",
+    "title_line1": "+2103 HD Videos",
+    "title_line2": "+289 Photos & +260 Comics",
+    "title_line3": "for the Mature & Discreet Man 😉",
+    "desc": "Instant access via a <strong>secure Telegram channel</strong> — 100% private, delivered to your email right after payment. Baltazar videos <em>and</em> Petit Baltazar included.",
+    "cta": "🛒 Get Access Now",
+    "price_note": "ℹ️ <em>Make sure to enter your email correctly to receive the link. You can use a <strong>pseudonym</strong> at checkout to stay anonymous.</em>",
+    "trust_secure": "Secure Payment",
+    "trust_instant": "Instant Access",
+    "trust_private": "Private Data",
+    "trust_email": "Link via Email",
+    "stat_members": "Active Members"
+  },
+  "video": {
+    "title": "Watch this video to save time",
+    "subtitle": "Watch this short video to understand the purchase process step by step."
+  },
+  "stats": {
+    "videos_label": "HD Videos",
+    "photos_label": "HD Photos",
+    "bd_label": "Adult Comics",
+    "members_label": "Active Members"
+  },
+  "offer": {
+    "label": "What you get",
+    "title": "Here's a summary of<br />everything you'll receive:",
+    "desc": "An access link to the Telegram channel containing all the content below.",
+    "card1_label": "HD Videos",
+    "card1_title": "+2103 Videos",
+    "card1_value": "Value: <span>10,300 FCFA</span>",
+    "card1_desc": "Baltazar and Petit Baltazar videos included — HD quality guaranteed.",
+    "card2_label": "HD Photos",
+    "card2_title": "+289 Photos",
+    "card2_value": "Value: <span>2,500 FCFA</span>",
+    "card2_desc": "High-definition photos, immediate access via Telegram.",
+    "card3_label": "Adult Comics",
+    "card3_title": "+260 Comics",
+    "card3_value": "Value: <span>9,500 FCFA</span>",
+    "card3_desc": "Adult comics for the Mature Man, included in the channel.",
+    "total_label": "Total value",
+    "total_content": "of content",
+    "price_label": "Today's offer price"
+  },
+  "telegram": {
+    "label": "Why Telegram?",
+    "title": "Your privacy,<br />our absolute priority",
+    "feat1_strong": "100% Secure",
+    "feat1_text": " — Telegram never discloses your personal information, unlike WhatsApp.",
+    "feat2_strong": "Guaranteed anonymity",
+    "feat2_text": " — You can even use a nickname at checkout. We don't want to know your identity.",
+    "feat3_strong": "Protect your loved ones",
+    "feat3_text": " — No need to leave WhatsApp exposed. The Telegram channel is isolated and secure.",
+    "feat4_strong": "Instant delivery",
+    "feat4_text": " — Once payment is confirmed, you receive the access link by email within seconds.",
+    "iphone_note": "⚠️ <em>If you use an iPhone, access via the Safari browser app to connect to Telegram.</em>",
+    "visual_title": "See you inside the channel! 🤜🏼🤛🏼",
+    "visual_desc": "Once your payment is confirmed, you'll be automatically redirected to our private channel where all the content awaits."
+  },
+  "testimonials": {
+    "label": "Customer Reviews",
+    "title": "+2357 members<br />already trust us",
+    "t1_text": "Got the link in less than 2 minutes after payment. Quality content, 100% recommend.",
+    "t2_text": "Honestly I was skeptical at first, but everything works perfectly. Discretion is definitely there.",
+    "t3_text": "The content is exactly as advertised. Telegram is really convenient and discreet. Thanks 👌",
+    "cta_text": "Join the community of <strong style=\"color:var(--primary);\">2357 satisfied members</strong> and enjoy right now."
+  },
+  "proofs": {
+    "label": "Proof of satisfaction",
+    "title": "They've already taken the step and given permission to have their name mentioned in testimonials. Client confidentiality is paramount to us!",
+    "desc": "Here are some feedback from our members satisfied with the quality of our services."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "q1": "How do I receive the content?",
+    "a1": "After your payment, you receive a PDF by email containing the invitation link to the private Telegram channel. Make sure to enter your email address correctly when placing your order.",
+    "q2": "Is it really discreet?",
+    "a2": "Yes, totally. We use Telegram because it doesn't share any personal information. You can even use a nickname when filling in your payment details. We're not looking to know you, just to deliver the content.",
+    "q3": "How long do I have access to the channel?",
+    "a3": "Once you join the Telegram channel, you have permanent access. The content remains available as long as the channel is active.",
+    "q4": "I'm on iPhone, is it compatible?",
+    "a4": "Yes! If you're using an iPhone, use the <strong>Safari</strong> browser app to connect to your Telegram account and access the channel."
+  },
+  "cta_section": {
+    "promo_label": "🔥 THIS PROMO IS AVAILABLE FOR RIGHT NOW ONLY",
+    "title": "Ready to join the<br />2357 satisfied members?",
+    "subtitle": "Instant Access · Secure Payment · 100% Discreet",
+    "btn": "🛒 Buy Now — 7,700 FCFA",
+    "warning": "⚠️ <strong>Important:</strong> Make sure to correctly enter your email when purchasing to receive your Telegram link. You can use a <strong>pseudonym</strong> at checkout to preserve your anonymity.",
+    "payment_methods": "Secure payment methods available via mobile money (Wave, Orange Money, MTN momo, Moov money, ...) or bank card (Visa and MasterCard)"
+  },
+  "upsell": {
+    "label": "Recommended for you",
+    "title": "Our Exclusive Premium Offers",
+    "kera_title": "Influencer Pack (KERA)",
+    "kera_desc": "Discover the exclusive content of the influencer everyone is talking about. Instant and discreet access.",
+    "kera_btn": "View Videos →",
+    "bd_title": "Pack +14,838 Adult Comics & Manga",
+    "bd_desc": "Discover our exclusive collection of adult comics. Immediate access to thousands of unique stories.",
+    "bd_btn": "View Comics Offer →"
+  },
+  "footer": {
+    "contact_intro": "A problem? Contact us:",
+    "copyright": "© 2024 Baltazar. All rights reserved. Content exclusively for adults."
+  },
+  "float_bar": {
+    "text": "🔥 Promo: <strong>7,700 FCFA</strong> instead of 23,300 FCFA",
+    "btn": "Buy 🛒"
+  }
+}

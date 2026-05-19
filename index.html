@@ -449,6 +449,40 @@
       padding: 0.55rem 1.4rem;
     }
 
+    /* ===================== LANGUAGE TOGGLE ===================== */
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid var(--outline-variant);
+      background: var(--surface-container-lowest);
+      color: var(--on-surface-variant);
+      font-family: var(--font-headline);
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      flex-shrink: 0;
+    }
+
+    .lang-toggle:hover {
+      background: var(--surface-container);
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: scale(1.05);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
     /* ===================== HERO ===================== */
     #hero {
       padding-top: calc(var(--spacing-24) + 10px);
@@ -1277,8 +1311,11 @@
   <nav>
     <div class="container">
       <a href="#" class="nav-logo">BAL<span>TAZAR</span></a>
-      <a href="https://baltazar.mymaketou.store/products/veux-tu-1385-video-289-photo-260-bd-video-baltazar-et-du-petit-baltazar-inclu/checkout"
-        class="btn-primary nav-cta">🔥 Acheter maintenant</a>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" onclick="switchLang(this.getAttribute('data-lang'))" data-lang="en" title="Switch language">EN</button>
+        <a href="https://baltazar.mymaketou.store/products/veux-tu-1385-video-289-photo-260-bd-video-baltazar-et-du-petit-baltazar-inclu/checkout"
+          class="btn-primary nav-cta" data-i18n="nav.cta">🔥 Acheter maintenant</a>
+      </div>
     </div>
   </nav>
 
@@ -1289,13 +1326,13 @@
 
         <!-- LEFT COLUMN: copy -->
         <div>
-          <div class="label-upper hero-badge fade-up">🔥 Offre Limitée — Promo Exclusive</div>
-          <h1 class="display-lg hero-title fade-up fade-up-d1">
+          <div class="label-upper hero-badge fade-up" data-i18n="hero.badge">🔥 Offre Limitée — Promo Exclusive</div>
+          <h1 class="display-lg hero-title fade-up fade-up-d1" data-i18n-html="hero.title_line1">
             <em>+2103 Vidéos HD</em><br />
-            +289 Photos &amp; +260 BD<br />
+            +289 Photos & +260 BD<br />
             pour Homme Mature et Discret 😉
           </h1>
-          <p class="body-md hero-desc fade-up fade-up-d2">
+          <p class="body-md hero-desc fade-up fade-up-d2" data-i18n-html="hero.desc">
             Accès instantané via un <strong>canal Télégram sécurisé</strong> — 100% privé,
             livré dans votre email dès le paiement.
             Vidéos Baltazar <em>et</em> du petit Baltazar inclus.
@@ -1303,7 +1340,7 @@
 
           <div class="hero-actions fade-up fade-up-d3">
             <a href="https://baltazar.mymaketou.store/products/veux-tu-1385-video-289-photo-260-bd-video-baltazar-et-du-petit-baltazar-inclu/checkout"
-              class="btn-primary" id="cta-hero" target="_blank" rel="noopener">
+              class="btn-primary" id="cta-hero" target="_blank" rel="noopener" data-i18n="hero.cta">
               🛒 J'en profite maintenant
             </a>
           </div>
@@ -1314,17 +1351,17 @@
             <span class="price-badge">−67&nbsp;%</span>
           </div>
 
-          <p class="fade-up fade-up-d4"
+          <p class="fade-up fade-up-d4" data-i18n-html="hero.price_note"
             style="font-size:0.85rem; color:var(--on-surface-variant); margin-top: 1rem; max-width: 450px;">
             ℹ️ <em>Assurez-vous de bien saisir votre email pour recevoir le lien. Vous pouvez utiliser un
               <strong>pseudonyme</strong> lors du paiement pour rester anonyme.</em>
           </p>
 
           <div class="trust-row fade-up fade-up-d4">
-            <span class="trust-badge"><span class="trust-icon">🔒</span> Paiement sécurisé</span>
-            <span class="trust-badge"><span class="trust-icon">⚡</span> Accès instantané</span>
-            <span class="trust-badge"><span class="trust-icon">🛡️</span> Données privées</span>
-            <span class="trust-badge"><span class="trust-icon">📩</span> Lien par email</span>
+            <span class="trust-badge"><span class="trust-icon">🔒</span> <span data-i18n="hero.trust_secure">Paiement sécurisé</span></span>
+            <span class="trust-badge"><span class="trust-icon">⚡</span> <span data-i18n="hero.trust_instant">Accès instantané</span></span>
+            <span class="trust-badge"><span class="trust-icon">🛡️</span> <span data-i18n="hero.trust_private">Données privées</span></span>
+            <span class="trust-badge"><span class="trust-icon">📩</span> <span data-i18n="hero.trust_email">Lien par email</span></span>
           </div>
         </div>
 
@@ -1362,7 +1399,7 @@
   <section class="section" id="video-tuto" style="padding-bottom: 0;">
     <div class="container">
       <div class="section-header">
-        <h2 class="display-sm" style="margin-bottom: var(--spacing-6);">Regarde cette video pour eviter de perdre du
+        <h2 class="display-sm" style="margin-bottom: var(--spacing-6);" data-i18n="video.title">Regarde cette video pour eviter de perdre du
           temps</h2>
       </div>
       <div style="max-width: 800px; margin: 0 auto;">
@@ -1371,7 +1408,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
-        <p class="body-md" style="font-size:0.85rem; margin-top: 1rem; text-align: center;">Regardez cette courte vidéo
+        <p class="body-md" style="font-size:0.85rem; margin-top: 1rem; text-align: center;" data-i18n="video.subtitle">Regardez cette courte vidéo
           pour comprendre le processus d'achat étape par étape.</p>
       </div>
     </div>
@@ -1382,19 +1419,19 @@
     <div class="container">
       <div>
         <span class="strip-number">+2&nbsp;103</span>
-        <span class="strip-label">Vidéos HD</span>
+        <span class="strip-label" data-i18n="stats.videos_label">Vidéos HD</span>
       </div>
       <div>
         <span class="strip-number">+289</span>
-        <span class="strip-label">Photos HD</span>
+        <span class="strip-label" data-i18n="stats.photos_label">Photos HD</span>
       </div>
       <div>
         <span class="strip-number">+260</span>
-        <span class="strip-label">BD adultes</span>
+        <span class="strip-label" data-i18n="stats.bd_label">BD adultes</span>
       </div>
       <div>
         <span class="strip-number">+2&nbsp;357</span>
-        <span class="strip-label">Membres actifs</span>
+        <span class="strip-label" data-i18n="stats.members_label">Membres actifs</span>
       </div>
     </div>
   </div>
@@ -1403,36 +1440,36 @@
   <section class="section" id="offre">
     <div class="container">
       <div class="section-header">
-        <p class="label-upper">Ce que tu reçois</p>
-        <h2 class="display-sm">Résumons ensemble ce que<br />tu recevras :</h2>
-        <p class="body-md">Un lien d'accès au canal Télégram contenant l'intégralité du contenu ci-dessous.</p>
+        <p class="label-upper" data-i18n="offer.label">Ce que tu reçois</p>
+        <h2 class="display-sm" data-i18n-html="offer.title">Résumons ensemble ce que<br />tu recevras :</h2>
+        <p class="body-md" data-i18n="offer.desc">Un lien d'accès au canal Télégram contenant l'intégralité du contenu ci-dessous.</p>
       </div>
 
       <div class="offer-grid">
         <div class="offer-card">
           <div class="offer-icon red">🎬</div>
-          <p class="label-upper" style="color: var(--primary); margin-bottom: 0.4rem;">Vidéos HD</p>
-          <p class="title-lg">+2103 Vidéos</p>
-          <p class="offer-value">Valeur : <span>10 300 FCFA</span></p>
-          <p class="body-md" style="margin-top: 0.75rem; font-size:0.9rem;">
+          <p class="label-upper" style="color: var(--primary); margin-bottom: 0.4rem;" data-i18n="offer.card1_label">Vidéos HD</p>
+          <p class="title-lg" data-i18n="offer.card1_title">+2103 Vidéos</p>
+          <p class="offer-value" data-i18n-html="offer.card1_value">Valeur : <span>10 300 FCFA</span></p>
+          <p class="body-md" style="margin-top: 0.75rem; font-size:0.9rem;" data-i18n="offer.card1_desc">
             Vidéos Baltazar et du petit Baltazar inclus — qualité HD garantie.
           </p>
         </div>
         <div class="offer-card">
           <div class="offer-icon gold">📸</div>
-          <p class="label-upper" style="color: var(--secondary); margin-bottom: 0.4rem;">Photos HD</p>
-          <p class="title-lg">+289 Photos</p>
-          <p class="offer-value">Valeur : <span>2 500 FCFA</span></p>
-          <p class="body-md" style="margin-top: 0.75rem; font-size:0.9rem;">
+          <p class="label-upper" style="color: var(--secondary); margin-bottom: 0.4rem;" data-i18n="offer.card2_label">Photos HD</p>
+          <p class="title-lg" data-i18n="offer.card2_title">+289 Photos</p>
+          <p class="offer-value" data-i18n-html="offer.card2_value">Valeur : <span>2 500 FCFA</span></p>
+          <p class="body-md" style="margin-top: 0.75rem; font-size:0.9rem;" data-i18n="offer.card2_desc">
             Photos haute définition, accès immédiat via Télégram.
           </p>
         </div>
         <div class="offer-card">
           <div class="offer-icon dark">📖</div>
-          <p class="label-upper" style="color: var(--on-surface-variant); margin-bottom: 0.4rem;">BD Adultes</p>
-          <p class="title-lg">+260 BD</p>
-          <p class="offer-value">Valeur : <span>9 500 FCFA</span></p>
-          <p class="body-md" style="margin-top: 0.75rem; font-size:0.9rem;">
+          <p class="label-upper" style="color: var(--on-surface-variant); margin-bottom: 0.4rem;" data-i18n="offer.card3_label">BD Adultes</p>
+          <p class="title-lg" data-i18n="offer.card3_title">+260 BD</p>
+          <p class="offer-value" data-i18n-html="offer.card3_value">Valeur : <span>9 500 FCFA</span></p>
+          <p class="body-md" style="margin-top: 0.75rem; font-size:0.9rem;" data-i18n="offer.card3_desc">
             Bandes dessinées adultes pour Homme Mature, incluses dans le canal.
           </p>
         </div>
@@ -1442,12 +1479,12 @@
       <div
         style="margin-top: var(--spacing-8); background: var(--surface-container-low); border-radius: 1.25rem; padding: var(--spacing-6); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <p class="label-upper" style="color: var(--primary);">Valeur totale</p>
+          <p class="label-upper" style="color: var(--primary);" data-i18n="offer.total_label">Valeur totale</p>
           <p class="title-lg">23 300 FCFA<span
-              style="font-size:0.85rem; font-weight:400; color:var(--on-surface-variant);"> de contenu</span></p>
+              style="font-size:0.85rem; font-weight:400; color:var(--on-surface-variant);" data-i18n="offer.total_content"> de contenu</span></p>
         </div>
         <div style="text-align: right;">
-          <p class="label-upper" style="color: var(--secondary);">Prix de l'offre aujourd'hui</p>
+          <p class="label-upper" style="color: var(--secondary);" data-i18n="offer.price_label">Prix de l'offre aujourd'hui</p>
           <p style="font-family:var(--font-headline); font-size:2rem; font-weight:800; color:var(--primary);">7 700
             FCFA</p>
           <p style="font-size:0.85rem; color:var(--on-surface-variant); text-decoration:line-through;">23 300 FCFA</p>
@@ -1471,41 +1508,41 @@
                 fill="#229ED9" />
             </svg>
           </div>
-          <p class="label-upper" style="color:var(--primary); margin-bottom:0.5rem;">Pourquoi Télégram ?</p>
-          <h2 class="display-sm" style="margin-bottom:var(--spacing-6);">Ta vie privée,<br />notre priorité absolue</h2>
+          <p class="label-upper" style="color:var(--primary); margin-bottom:0.5rem;" data-i18n="telegram.label">Pourquoi Télégram ?</p>
+          <h2 class="display-sm" style="margin-bottom:var(--spacing-6);" data-i18n-html="telegram.title">Ta vie privée,<br />notre priorité absolue</h2>
           <ul class="feature-list">
             <li>
               <div class="feature-check">✓</div>
-              <p class="body-md"><strong style="color:var(--on-surface);">100% Sécurisé</strong> — Télégram ne divulgue
+              <p class="body-md" data-i18n-html="telegram.feat1"><strong style="color:var(--on-surface);">100% Sécurisé</strong> — Télégram ne divulgue
                 jamais tes informations personnelles, contrairement à WhatsApp.</p>
             </li>
             <li>
               <div class="feature-check">✓</div>
-              <p class="body-md"><strong style="color:var(--on-surface);">Anonymat garanti</strong> — Tu peux même
+              <p class="body-md" data-i18n-html="telegram.feat2"><strong style="color:var(--on-surface);">Anonymat garanti</strong> — Tu peux même
                 utiliser un surnom lors du paiement. Nous ne voulons pas connaître ton identité.</p>
             </li>
             <li>
               <div class="feature-check">✓</div>
-              <p class="body-md"><strong style="color:var(--on-surface);">Protection de tes proches</strong> — Plus
+              <p class="body-md" data-i18n-html="telegram.feat3"><strong style="color:var(--on-surface);">Protection de tes proches</strong> — Plus
                 besoin de laisser WhatsApp exposé. Le canal Télégram est isolé et sécurisé.</p>
             </li>
             <li>
               <div class="feature-check">✓</div>
-              <p class="body-md"><strong style="color:var(--on-surface);">Livraison instantanée</strong> — Dès le
+              <p class="body-md" data-i18n-html="telegram.feat4"><strong style="color:var(--on-surface);">Livraison instantanée</strong> — Dès le
                 paiement validé, tu reçois le lien d'accès par email en quelques secondes.</p>
             </li>
           </ul>
-          <p style="margin-top:var(--spacing-6); font-size:0.85rem; color:var(--on-surface-variant);">
+          <p style="margin-top:var(--spacing-6); font-size:0.85rem; color:var(--on-surface-variant);" data-i18n-html="telegram.iphone_note">
             ⚠️ <em>Si tu utilises un iPhone, accède via l'application Safari pour te connecter à Télégram.</em>
           </p>
         </div>
 
         <div class="telegram-visual">
-          <p class="title-sm" style="margin-bottom:var(--spacing-4); text-align: center;">Bon on se retrouve dans le
+          <p class="title-sm" style="margin-bottom:var(--spacing-4); text-align: center;" data-i18n="telegram.visual_title">Bon on se retrouve dans le
             canal ! 🤜🏼🤛🏼</p>
           <div
             style="background: var(--surface-container-low); border-radius: 1rem; padding: 1.5rem; text-align: center;">
-            <p class="body-md">Une fois ton paiement validé, tu seras automatiquement redirigé vers notre canal privé où
+            <p class="body-md" data-i18n="telegram.visual_desc">Une fois ton paiement validé, tu seras automatiquement redirigé vers notre canal privé où
               tout le contenu t'attend.</p>
           </div>
         </div>
@@ -1517,33 +1554,33 @@
   <section class="section" id="avis">
     <div class="container">
       <div class="section-header">
-        <p class="label-upper">Avis clients</p>
-        <h2 class="display-sm">+2357 membres<br />nous font déjà confiance</h2>
+        <p class="label-upper" data-i18n="testimonials.label">Avis clients</p>
+        <h2 class="display-sm" data-i18n-html="testimonials.title">+2357 membres<br />nous font déjà confiance</h2>
       </div>
 
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">Reçu le lien en moins de 2 minutes après le paiement. Contenu de qualité, je
+          <p class="testimonial-text" data-i18n="testimonials.t1_text">Reçu le lien en moins de 2 minutes après le paiement. Contenu de qualité, je
             recommande à 100%.</p>
           <p class="testimonial-author"> Membre #847</p>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">Franchement j'étais sceptique au départ, mais tout fonctionne parfaitement. La
+          <p class="testimonial-text" data-i18n="testimonials.t2_text">Franchement j'étais sceptique au départ, mais tout fonctionne parfaitement. La
             discrétion est au rendez-vous.</p>
           <p class="testimonial-author"> Membre #1204</p>
         </div>
         <div class="testimonial-card">
           <div class="stars">★★★★★</div>
-          <p class="testimonial-text">Le contenu est exactement ce qui était annoncé. Télégram c'est vraiment pratique
+          <p class="testimonial-text" data-i18n="testimonials.t3_text">Le contenu est exactement ce qui était annoncé. Télégram c'est vraiment pratique
             et discret. Merci 👌</p>
           <p class="testimonial-author"> Membre #2101</p>
         </div>
       </div>
 
       <div style="text-align:center; margin-top:var(--spacing-8);">
-        <p class="body-md">Rejoins la communauté de <strong style="color:var(--primary);">2357 membres
+        <p class="body-md" data-i18n-html="testimonials.cta_text">Rejoins la communauté de <strong style="color:var(--primary);">2357 membres
             satisfaits</strong> et profite dès maintenant.</p>
       </div>
     </div>
@@ -1553,10 +1590,10 @@
   <section class="section" id="proofs" style="background: var(--surface-container-lowest);">
     <div class="container">
       <div class="section-header">
-        <p class="label-upper">Preuves de satisfaction</p>
-        <h2 class="display-sm">Ils ont déjà franchi le pas et ont donné leur autorisation pour préciser leur nom dans
+        <p class="label-upper" data-i18n="proofs.label">Preuves de satisfaction</p>
+        <h2 class="display-sm" data-i18n="proofs.title">Ils ont déjà franchi le pas et ont donné leur autorisation pour préciser leur nom dans
           les témoignages. La confidentialité de nos clients est très primordial pour nous!</h2>
-        <p class="body-md">Voici quelques retours de nos membres satisfaits par la qualité de nos services.</p>
+        <p class="body-md" data-i18n="proofs.desc">Voici quelques retours de nos membres satisfaits par la qualité de nos services.</p>
       </div>
 
       <div class="proof-grid">
@@ -1586,48 +1623,48 @@
   <section class="section faq-section" id="faq">
     <div class="container">
       <div class="section-header">
-        <p class="label-upper">FAQ</p>
-        <h2 class="display-sm">Foire aux questions</h2>
+        <p class="label-upper" data-i18n="faq.label">FAQ</p>
+        <h2 class="display-sm" data-i18n="faq.title">Foire aux questions</h2>
       </div>
 
       <div class="faq-list">
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-i18n="faq.q1">
             Comment est-ce que je reçois le contenu ?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">
+          <div class="faq-a" data-i18n="faq.a1">
             Après ton paiement, tu reçois un PDF par email contenant le lien d'invitation au canal Télégram privé.
             Assure-toi de saisir ton adresse email correctement lors de la commande.
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-i18n="faq.q2">
             Est-ce que c'est vraiment discret ?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">
+          <div class="faq-a" data-i18n="faq.a2">
             Oui, totalement. Nous utilisons Télégram car il ne partage aucune information personnelle.
             Tu peux même utiliser un surnom lors du remplissage de tes informations de paiement.
             Nous ne cherchons pas à te connaître, seulement à te livrer le contenu.
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-i18n="faq.q3">
             Combien de temps ai-je accès au canal ?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">
+          <div class="faq-a" data-i18n="faq.a3">
             Une fois que tu rejoins le canal Télégram, tu y as accès de façon permanente.
             Le contenu reste disponible aussi longtemps que le canal est actif.
           </div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-q" onclick="toggleFaq(this)" data-i18n="faq.q4">
             Je suis sur iPhone, est-ce compatible ?
             <span class="faq-icon">+</span>
           </button>
-          <div class="faq-a">
+          <div class="faq-a" data-i18n-html="faq.a4">
             Oui ! Si tu utilises un iPhone, utilise l'application <strong>Safari</strong> pour te connecter
             à ton compte Télégram et accéder au canal.
           </div>
@@ -1639,25 +1676,25 @@
   <!-- ===== CTA SECTION ===== -->
   <section class="cta-section" id="acheter">
     <div class="container">
-      <p class="label-upper" style="color: rgba(255,255,255,0.7); margin-bottom:0.75rem;">🔥 LA PROMO EST DISPONIBLE
+      <p class="label-upper" style="color: rgba(255,255,255,0.7); margin-bottom:0.75rem;" data-i18n="cta_section.promo_label">🔥 LA PROMO EST DISPONIBLE
         UNIQUEMENT POUR TOUT DE SUITE</p>
-      <h2 class="display-sm">Prêt à rejoindre les<br />2357 membres satisfaits ?</h2>
-      <p>Accès instantané · Paiement sécurisé · 100% Discret</p>
+      <h2 class="display-sm" data-i18n-html="cta_section.title">Prêt à rejoindre les<br />2357 membres satisfaits ?</h2>
+      <p data-i18n="cta_section.subtitle">Accès instantané · Paiement sécurisé · 100% Discret</p>
       <div class="cta-price-row">
         <span class="cta-price-now">7 700 FCFA</span>
         <span class="cta-price-old">23 300 FCFA</span>
       </div>
       <a href="https://baltazar.mymaketou.store/products/veux-tu-1385-video-289-photo-260-bd-video-baltazar-et-du-petit-baltazar-inclu/checkout"
-        class="btn-white" id="cta-main" target="_blank" rel="noopener">
+        class="btn-white" id="cta-main" target="_blank" rel="noopener" data-i18n="cta_section.btn">
         🛒 Acheter Maintenant — 7 700 FCFA
       </a>
       <p
-        style="margin-top:1.5rem; font-size:0.9rem; color: rgba(255,255,255,0.95); font-weight: 500; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.5; background: rgba(0,0,0,0.1); padding: 1rem; border-radius: 0.75rem; border: 1px dashed rgba(255,255,255,0.3);">
+        style="margin-top:1.5rem; font-size:0.9rem; color: rgba(255,255,255,0.95); font-weight: 500; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.5; background: rgba(0,0,0,0.1); padding: 1rem; border-radius: 0.75rem; border: 1px dashed rgba(255,255,255,0.3);" data-i18n-html="cta_section.warning">
         ⚠️ <strong>Important :</strong> Assurez-vous d'insérer correctement votre email lors de l'achat pour recevoir
         votre lien Télégram. Vous pouvez utiliser un <strong>pseudonyme</strong> lors du paiement pour préserver votre
         anonymat.
       </p>
-      <p style="margin-top:1.5rem; font-size:0.85rem; opacity:0.8;">Moyens de paiement sécurisés disponibles via mobile
+      <p style="margin-top:1.5rem; font-size:0.85rem; opacity:0.8;" data-i18n="cta_section.payment_methods">Moyens de paiement sécurisés disponibles via mobile
         money ( Wave, Orange Money, MTN momo, Moov money, ... ) ou carte bancaire ( Visa et MasterCard )</p>
       <img src="./assets/moyens-paiement.png" alt="Moyens de paiement sécurisés"
         style="width: 100%; max-width: 350px; margin: 1rem auto 0; display: block; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
@@ -1668,8 +1705,8 @@
   <!-- ===== UPSELL SECTION ===== -->
   <section class="section" id="upsell" style="background: var(--surface-container-high); border-top: 1px solid var(--outline-variant); text-align: center;">
     <div class="container">
-      <p class="label-upper" style="color: var(--primary); margin-bottom: 1rem;">Recommandé pour vous</p>
-      <h2 class="display-sm" style="margin-bottom: 2rem;">Nos Offres Premium Exclusives</h2>
+      <p class="label-upper" style="color: var(--primary); margin-bottom: 1rem;" data-i18n="upsell.label">Recommandé pour vous</p>
+      <h2 class="display-sm" style="margin-bottom: 2rem;" data-i18n="upsell.title">Nos Offres Premium Exclusives</h2>
       
       <div style="display: flex; flex-direction: column; gap: 1.5rem; max-width: 850px; margin: 0 auto;">
         
@@ -1677,9 +1714,9 @@
         <div style="background: white; border-radius: 2rem; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; text-align: left;">
           <img src="https://kera.famatchai226.workers.dev/assets/hero%20caroussel/0.jpeg" alt="Pack Kera" style="width: 120px; height: 120px; object-fit: cover; border-radius: 1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.15); border: 2px solid white;">
           <div style="flex: 1; min-width: 280px;">
-            <h3 class="title-lg" style="margin-bottom: 0.5rem; color: var(--on-surface);">Pack Influenceuse (KERA)</h3>
-            <p class="body-md" style="font-size: 0.95rem; margin-bottom: 1.5rem;">Découvrez le contenu exclusif de l'influenceuse dont tout le monde parle. Accès instantané et discret.</p>
-            <a href="https://kera.famatchai226.workers.dev/" class="btn-primary" style="animation: none;">Voir les Vidéos →</a>
+            <h3 class="title-lg" style="margin-bottom: 0.5rem; color: var(--on-surface);" data-i18n="upsell.kera_title">Pack Influenceuse (KERA)</h3>
+            <p class="body-md" style="font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="upsell.kera_desc">Découvrez le contenu exclusif de l'influenceuse dont tout le monde parle. Accès instantané et discret.</p>
+            <a href="https://kera.famatchai226.workers.dev/" class="btn-primary" style="animation: none;" data-i18n="upsell.kera_btn">Voir les Vidéos →</a>
           </div>
         </div>
 
@@ -1687,9 +1724,9 @@
         <div style="background: white; border-radius: 2rem; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; text-align: left;">
           <img src="https://bd.famatchai226.workers.dev/assets/hero%20caroussel/0.jpg" alt="Collection BD Adulte" style="width: 120px; height: 120px; object-fit: cover; border-radius: 1.5rem; box-shadow: 0 10px 20px rgba(0,0,0,0.15); border: 2px solid white;">
           <div style="flex: 1; min-width: 280px;">
-            <h3 class="title-lg" style="margin-bottom: 0.5rem; color: var(--on-surface);">Pack +14 838 BD & Mangas pour Adultes</h3>
-            <p class="body-md" style="font-size: 0.95rem; margin-bottom: 1.5rem;">Découvrez notre collection exclusive de bandes dessinées pour adultes. Un accès immédiat à des milliers d'histoires inédites.</p>
-            <a href="https://bd.famatchai226.workers.dev/" class="btn-secondary" style="animation: none;" target="_blank" rel="noopener">Voir l'offre BD →</a>
+            <h3 class="title-lg" style="margin-bottom: 0.5rem; color: var(--on-surface);" data-i18n="upsell.bd_title">Pack +14 838 BD & Mangas pour Adultes</h3>
+            <p class="body-md" style="font-size: 0.95rem; margin-bottom: 1.5rem;" data-i18n="upsell.bd_desc">Découvrez notre collection exclusive de bandes dessinées pour adultes. Un accès immédiat à des milliers d'histoires inédites.</p>
+            <a href="https://bd.famatchai226.workers.dev/" class="btn-secondary" style="animation: none;" target="_blank" rel="noopener" data-i18n="upsell.bd_btn">Voir l'offre BD →</a>
           </div>
         </div>
 
@@ -1700,22 +1737,22 @@
   <footer>
     <div class="container">
       <span class="footer-logo">BAL<em>TAZAR</em></span>
-      <p style="margin-bottom:1rem;">Un problème ? Contactez-nous :</p>
+      <p style="margin-bottom:1rem;" data-i18n="footer.contact_intro">Un problème ? Contactez-nous :</p>
       <p style="margin-bottom: 1.5rem;">
         <a href="mailto:balthazarservice3@gmail.com">balthazarservice3@gmail.com</a>
       </p>
-      <p style="font-size:0.8rem; opacity: 0.5;">© 2024 Baltazar. Tous droits réservés. Contenu exclusivement pour
+      <p style="font-size:0.8rem; opacity: 0.5;" data-i18n="footer.copyright">© 2024 Baltazar. Tous droits réservés. Contenu exclusivement pour
         adultes.</p>
     </div>
   </footer>
 
   <!-- ===== FLOATING CTA BAR ===== -->
   <div class="float-bar" id="floatBar">
-    <span class="float-bar-text">
+    <span class="float-bar-text" data-i18n-html="float_bar.text">
       🔥 Promo : <strong>7 700 FCFA</strong> au lieu de 23 300 FCFA
     </span>
     <a href="https://baltazar.mymaketou.store/products/veux-tu-1385-video-289-photo-260-bd-video-baltazar-et-du-petit-baltazar-inclu/checkout"
-      class="btn-primary" style="font-size:0.85rem; padding:0.65rem 1.4rem;" target="_blank" rel="noopener">
+      class="btn-primary" style="font-size:0.85rem; padding:0.65rem 1.4rem;" target="_blank" rel="noopener" data-i18n="float_bar.btn">
       J'achète 🛒
     </a>
   </div>
@@ -1781,6 +1818,7 @@
     };
   </script>
   <script defer src="/<unique-path>/script.js"></script>
+  <script defer src="./i18n.js"></script>
 </body>
 
 </html>

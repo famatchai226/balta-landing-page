@@ -9,7 +9,7 @@
   },
   "hero": {
     "badge": "🔥 Limited Offer — Exclusive Promo",
-    "title_line1": "+2103 HD Videos",
+    "title_line1": "<em>+2103 HD Videos</em><br />\n+289 Photos & +260 Comics<br />\nfor the Mature & Discreet Man 😉",
     "title_line2": "+289 Photos & +260 Comics",
     "title_line3": "for the Mature & Discreet Man 😉",
     "desc": "Instant access via a <strong>secure Telegram channel</strong> — 100% private, delivered to your email right after payment. Baltazar videos <em>and</em> Petit Baltazar included.",
@@ -62,6 +62,10 @@
     "feat3_text": " — No need to leave WhatsApp exposed. The Telegram channel is isolated and secure.",
     "feat4_strong": "Instant delivery",
     "feat4_text": " — Once payment is confirmed, you receive the access link by email within seconds.",
+    "feat1": "<strong style=\"color:var(--on-surface);\">100% Secure</strong> — Telegram never discloses your personal information, unlike WhatsApp.",
+    "feat2": "<strong style=\"color:var(--on-surface);\">Guaranteed anonymity</strong> — You can even use a nickname at checkout. We don't want to know your identity.",
+    "feat3": "<strong style=\"color:var(--on-surface);\">Protect your loved ones</strong> — No need to leave WhatsApp exposed. The Telegram channel is isolated and secure.",
+    "feat4": "<strong style=\"color:var(--on-surface);\">Instant delivery</strong> — Once payment is confirmed, you receive the access link by email within seconds.",
     "iphone_note": "⚠️ <em>If you use an iPhone, access via the Safari browser app to connect to Telegram.</em>",
     "visual_title": "See you inside the channel! 🤜🏼🤛🏼",
     "visual_desc": "Once your payment is confirmed, you'll be automatically redirected to our private channel where all the content awaits."

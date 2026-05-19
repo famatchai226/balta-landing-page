@@ -9,7 +9,7 @@
   },
   "hero": {
     "badge": "🔥 Offre Limitée — Promo Exclusive",
-    "title_line1": "+2103 Vidéos HD",
+    "title_line1": "<em>+2103 Vidéos HD</em><br />\n+289 Photos & +260 BD<br />\npour Homme Mature et Discret 😉",
     "title_line2": "+289 Photos & +260 BD",
     "title_line3": "pour Homme Mature et Discret 😉",
     "desc": "Accès instantané via un <strong>canal Télégram sécurisé</strong> — 100% privé, livré dans votre email dès le paiement. Vidéos Baltazar <em>et</em> du petit Baltazar inclus.",
@@ -62,6 +62,10 @@
     "feat3_text": " — Plus besoin de laisser WhatsApp exposé. Le canal Télégram est isolé et sécurisé.",
     "feat4_strong": "Livraison instantanée",
     "feat4_text": " — Dès le paiement validé, tu reçois le lien d'accès par email en quelques secondes.",
+    "feat1": "<strong style=\"color:var(--on-surface);\">100% Sécurisé</strong> — Télégram ne divulgue jamais tes informations personnelles, contrairement à WhatsApp.",
+    "feat2": "<strong style=\"color:var(--on-surface);\">Anonymat garanti</strong> — Tu peux même utiliser un surnom lors du paiement. Nous ne voulons pas connaître ton identité.",
+    "feat3": "<strong style=\"color:var(--on-surface);\">Protection de tes proches</strong> — Plus besoin de laisser WhatsApp exposé. Le canal Télégram est isolé et sécurisé.",
+    "feat4": "<strong style=\"color:var(--on-surface);\">Livraison instantanée</strong> — Dès le paiement validé, tu reçois le lien d'accès par email en quelques secondes.",
     "iphone_note": "⚠️ <em>Si tu utilises un iPhone, accède via l'application Safari pour te connecter à Télégram.</em>",
     "visual_title": "Bon on se retrouve dans le canal ! 🤜🏼🤛🏼",
     "visual_desc": "Une fois ton paiement validé, tu seras automatiquement redirigé vers notre canal privé où tout le contenu t'attend."

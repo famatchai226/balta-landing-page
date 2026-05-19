@@ -29,22 +29,28 @@
     return DEFAULT_LANG;
   }
 
-  const lang = detectLang();
-
   /* ── 2. Chargement du dictionnaire JSON ── */
   let dict;
-  try {
-    const res = await fetch(`./locales/${lang}.json`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    dict = await res.json();
-  } catch (err) {
-    console.warn(`[i18n] Failed to load "${lang}.json", falling back to "${DEFAULT_LANG}".`, err);
+  let currentLang = localStorage.getItem('balta-lang') || detectLang();
+
+  async function loadLang(lang) {
     try {
-      const fallback = await fetch(`./locales/${DEFAULT_LANG}.json`);
-      dict = await fallback.json();
-    } catch (e) {
-      console.error('[i18n] Could not load any locale file. Skipping translations.', e);
-      return;
+      const res = await fetch(`./locales/${lang}.json`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      dict = await res.json();
+      currentLang = lang;
+      localStorage.setItem('balta-lang', lang);
+      applyTranslations();
+    } catch (err) {
+      console.warn(`[i18n] Failed to load "${lang}.json", falling back to "${DEFAULT_LANG}".`, err);
+      try {
+        const fallback = await fetch(`./locales/${DEFAULT_LANG}.json`);
+        dict = await fallback.json();
+        currentLang = DEFAULT_LANG;
+        applyTranslations();
+      } catch (e) {
+        console.error('[i18n] Could not load any locale file. Skipping translations.', e);
+      }
     }
   }
 
@@ -54,39 +60,57 @@
   }
 
   /* ── 4. Injection dans le DOM ── */
+  function applyTranslations() {
+    // 4a. Texte simple : data-i18n="clé"
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = get(key);
+      if (val !== null) el.textContent = val;
+    });
 
-  // 4a. Texte simple : data-i18n="clé"
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const val = get(key);
-    if (val !== null) el.textContent = val;
-  });
+    // 4b. HTML enrichi : data-i18n-html="clé"
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      const val = get(key);
+      if (val !== null) el.innerHTML = val;
+    });
 
-  // 4b. HTML enrichi : data-i18n-html="clé"
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const key = el.getAttribute('data-i18n-html');
-    const val = get(key);
-    if (val !== null) el.innerHTML = val;
-  });
+    // 4c. Attributs HTML : data-i18n-attr="nomAttribut" + data-i18n="clé"
+    document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+      const attr = el.getAttribute('data-i18n-attr');
+      const key = el.getAttribute('data-i18n');
+      const val = get(key);
+      if (attr && val !== null) el.setAttribute(attr, val);
+    });
 
-  // 4c. Attributs HTML : data-i18n-attr="nomAttribut" + data-i18n="clé"
-  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
-    const attr = el.getAttribute('data-i18n-attr');
-    const key = el.getAttribute('data-i18n');
-    const val = get(key);
-    if (attr && val !== null) el.setAttribute(attr, val);
-  });
+    // 4d. Mise à jour de <html lang=""> et <title>
+    document.documentElement.setAttribute('lang', dict.lang || currentLang);
 
-  /* ── 5. Mise à jour de <html lang=""> et <title> ── */
-  document.documentElement.setAttribute('lang', dict.lang || lang);
+    const titleEl = document.querySelector('title');
+    if (titleEl && dict.meta && dict.meta.title) {
+      titleEl.textContent = dict.meta.title;
+    }
 
-  const titleEl = document.querySelector('title');
-  if (titleEl && dict.meta && dict.meta.title) {
-    titleEl.textContent = dict.meta.title;
+    const descEl = document.querySelector('meta[name="description"]');
+    if (descEl && dict.meta && dict.meta.description) {
+      descEl.setAttribute('content', dict.meta.description);
+    }
+
+    // 4e. Mettre à jour le bouton de bascule de langue
+    const toggleBtn = document.getElementById('langToggle');
+    if (toggleBtn) {
+      const nextLang = currentLang === 'fr' ? 'en' : 'fr';
+      toggleBtn.textContent = nextLang.toUpperCase();
+      toggleBtn.setAttribute('data-lang', nextLang);
+    }
   }
 
-  const descEl = document.querySelector('meta[name="description"]');
-  if (descEl && dict.meta && dict.meta.description) {
-    descEl.setAttribute('content', dict.meta.description);
-  }
+  /* ── 5. Exposer la fonction de changement de langue globalement ── */
+  window.switchLang = async function (lang) {
+    if (lang === currentLang) return;
+    await loadLang(lang);
+  };
+
+  /* ── 6. Initialisation ── */
+  await loadLang(currentLang);
 })();

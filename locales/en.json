@@ -23,7 +23,8 @@
   },
   "video": {
     "title": "Watch this video to save time",
-    "subtitle": "Watch this short video to understand the purchase process step by step."
+    "subtitle": "Watch this short video to understand the purchase process step by step.",
+    "src": "./assets/video/balta 7k eng.mp4"
   },
   "stats": {
     "videos_label": "HD Videos",

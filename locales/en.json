@@ -38,15 +38,15 @@
     "desc": "An access link to the Telegram channel containing all the content below.",
     "card1_label": "HD Videos",
     "card1_title": "+2103 Videos",
-    "card1_value": "Value: <span>10,300 FCFA</span>",
+    "card1_value": "Value: <span>11,000 FCFA</span>",
     "card1_desc": "Baltazar and Petit Baltazar videos included — HD quality guaranteed.",
     "card2_label": "HD Photos",
     "card2_title": "+289 Photos",
-    "card2_value": "Value: <span>2,500 FCFA</span>",
+    "card2_value": "Value: <span>3,000 FCFA</span>",
     "card2_desc": "High-definition photos, immediate access via Telegram.",
     "card3_label": "Adult Comics",
     "card3_title": "+260 Comics",
-    "card3_value": "Value: <span>9,500 FCFA</span>",
+    "card3_value": "Value: <span>9,300 FCFA</span>",
     "card3_desc": "Adult comics for the Mature Man, included in the channel.",
     "total_label": "Total value",
     "total_content": "of content",
@@ -100,7 +100,7 @@
     "promo_label": "🔥 THIS PROMO IS AVAILABLE FOR RIGHT NOW ONLY",
     "title": "Ready to join the<br />2357 satisfied members?",
     "subtitle": "Instant Access · Secure Payment · 100% Discreet",
-    "btn": "🛒 Buy Now — 7,700 FCFA",
+    "btn": "🛒 Buy Now — 5,500 FCFA",
     "warning": "⚠️ <strong>Important:</strong> Make sure to correctly enter your email when purchasing to receive your Telegram link. You can use a <strong>pseudonym</strong> at checkout to preserve your anonymity.",
     "payment_methods": "Secure payment methods available via mobile money (Wave, Orange Money, MTN momo, Moov money, ...) or bank card (Visa and MasterCard)"
   },
@@ -119,7 +119,7 @@
     "copyright": "© 2024 Baltazar. All rights reserved. Content exclusively for adults."
   },
   "float_bar": {
-    "text": "🔥 Promo: <strong>7,700 FCFA</strong> instead of 23,300 FCFA",
+    "text": "🔥 Promo: <strong>5,500 FCFA</strong> instead of 23,300 FCFA",
     "btn": "Buy 🛒"
   }
 }
